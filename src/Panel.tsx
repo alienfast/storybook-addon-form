@@ -1,5 +1,6 @@
 import { useAddonState, useChannel } from '@storybook/api'
 import { AddonPanel } from '@storybook/components'
+import { STORY_CHANGED } from '@storybook/core-events'
 import * as React from 'react'
 
 import { PanelContent } from './components/PanelContent'
@@ -20,6 +21,10 @@ export const Panel: React.FC<PanelProps> = (props) => {
   const emit = useChannel({
     // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
     [EVENTS.RESULT]: (newResults) => setState(newResults),
+    [STORY_CHANGED]: () => {
+      // eslint-disable-next-line no-console
+      console.log('panel story changed')
+    },
   })
 
   return (

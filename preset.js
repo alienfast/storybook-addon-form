@@ -1,6 +1,3 @@
-function config(entry = []) {
-  return [...entry, require.resolve("./dist/esm/preset/preview")];
-}
 
 function managerEntries(entry = []) {
   return [...entry, require.resolve("./dist/esm/preset/manager")];
@@ -8,5 +5,4 @@ function managerEntries(entry = []) {
 
 module.exports = {
   managerEntries,
-  config,
 };
