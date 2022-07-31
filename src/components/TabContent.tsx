@@ -1,6 +1,6 @@
-import React from "react";
+import { Link, Source, Title } from "@storybook/components";
 import { styled } from "@storybook/theming";
-import { Title, Source, Link } from "@storybook/components";
+import React from "react";
 
 const TabWrapper = styled.div(({ theme }) => ({
   background: theme.background.content,

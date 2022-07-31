@@ -1,6 +1,7 @@
+import { Button, Placeholder, TabsState } from "@storybook/components";
+import { convert, styled, themes } from "@storybook/theming";
 import React, { Fragment } from "react";
-import { styled, themes, convert } from "@storybook/theming";
-import { TabsState, Placeholder, Button } from "@storybook/components";
+
 import { List } from "./List";
 
 export const RequestDataButton = styled(Button)({

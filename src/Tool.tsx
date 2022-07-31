@@ -1,6 +1,7 @@
-import React, { useCallback } from "react";
 import { useGlobals } from "@storybook/api";
-import { Icons, IconButton } from "@storybook/components";
+import { IconButton, Icons } from "@storybook/components";
+import React, { useCallback } from "react";
+
 import { TOOL_ID } from "./constants";
 
 export const Tool = () => {
