@@ -4,3 +4,19 @@ storybook-static/
 build-storybook.log
 .DS_Store
 .env
+build
+tsconfig.tsbuildinfo
+
+# yarn zero install enabled
+.pnp.*
+.yarn/*
+!.yarn/cache
+!.yarn/unplugged
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
+
+
+node_modules
