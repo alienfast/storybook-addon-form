@@ -1,16 +1,16 @@
-import { useParameter } from "@storybook/api";
-import React from "react";
+import { useParameter } from '@storybook/api'
+import * as React from 'react'
 
-import { TabContent } from "./components/TabContent";
-import { PARAM_KEY } from "./constants";
+import { TabContent } from './components/TabContent'
+import { PARAM_KEY } from './constants'
 
 interface TabProps {
-  active: boolean;
+  active: boolean
 }
 
 export const Tab: React.FC<TabProps> = ({ active }) => {
   // https://storybook.js.org/docs/react/addons/addons-api#useparameter
-  const paramData = useParameter<string>(PARAM_KEY, "");
+  const paramData = useParameter<string>(PARAM_KEY, '')
 
-  return active ? <TabContent code={paramData} /> : null;
-};
+  return active ? <TabContent code={paramData} /> : null
+}

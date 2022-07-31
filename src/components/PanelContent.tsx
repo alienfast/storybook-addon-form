@@ -1,55 +1,38 @@
-import { Button, Placeholder, TabsState } from "@storybook/components";
-import { convert, styled, themes } from "@storybook/theming";
-import React, { Fragment } from "react";
+import { Button, Placeholder, TabsState } from '@storybook/components'
+import { convert, styled, themes } from '@storybook/theming'
+import React, { Fragment } from 'react'
 
-import { List } from "./List";
+import { List } from './List'
 
 export const RequestDataButton = styled(Button)({
-  marginTop: "1rem",
-});
+  marginTop: '1rem',
+})
 
 type Results = {
-  danger: any[];
-  warning: any[];
-};
+  danger: any[]
+  warning: any[]
+}
 
 interface PanelContentProps {
-  results: Results;
-  fetchData: () => void;
-  clearData: () => void;
+  results: Results
+  fetchData: () => void
+  clearData: () => void
 }
 
 /**
  * Checkout https://github.com/storybookjs/storybook/blob/next/addons/jest/src/components/Panel.tsx
  * for a real world example
  */
-export const PanelContent: React.FC<PanelContentProps> = ({
-  results,
-  fetchData,
-  clearData,
-}) => (
-  <TabsState
-    initial="overview"
-    backgroundColor={convert(themes.normal).background.hoverable}
-  >
-    <div
-      id="overview"
-      title="Overview"
-      color={convert(themes.normal).color.positive}
-    >
+export const PanelContent: React.FC<PanelContentProps> = ({ results, fetchData, clearData }) => (
+  <TabsState initial="overview" backgroundColor={convert(themes.normal).background.hoverable}>
+    <div id="overview" title="Overview" color={convert(themes.normal).color.positive}>
       <Placeholder>
         <Fragment>
-          Addons can gather details about how a story is rendered. This is panel
-          uses a tab pattern. Click the button below to fetch data for the other
-          two tabs.
+          Addons can gather details about how a story is rendered. This is panel uses a tab pattern.
+          Click the button below to fetch data for the other two tabs.
         </Fragment>
         <Fragment>
-          <RequestDataButton
-            secondary
-            small
-            onClick={fetchData}
-            style={{ marginRight: 16 }}
-          >
+          <RequestDataButton secondary small onClick={fetchData} style={{ marginRight: 16 }}>
             Request data
           </RequestDataButton>
 
@@ -74,4 +57,4 @@ export const PanelContent: React.FC<PanelContentProps> = ({
       <List items={results.warning} />
     </div>
   </TabsState>
-);
+)

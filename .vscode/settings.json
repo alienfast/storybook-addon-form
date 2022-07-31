@@ -1,7 +1,9 @@
 {
   "search.exclude": {
     "**/.yarn": true,
-    "**/.pnp.*": true
+    "**/.pnp.*": true,
+    ".eslintcache": true,
+    "yarn.lock": true
   },
   "eslint.nodePath": ".yarn/sdks",
   "typescript.tsdk": "node_modules/typescript/lib",

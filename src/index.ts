@@ -1,7 +1,7 @@
 /* eslint-disable unicorn/prefer-module */
 if (module && module.hot && module.hot.decline) {
-  module.hot.decline();
+  module.hot.decline()
 }
 
 // make it work with --isolatedModules
-export default {};
+export default {}
