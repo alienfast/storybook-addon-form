@@ -13,6 +13,7 @@
     "type": "git",
     "url": "https://github.com/alienfast/storybook-addon-form"
   },
+  "author": "Kevin Ross <kevin.ross@alienfast.com> (https://alienfast.com/)",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
   "types": "dist/ts/index.d.ts",
