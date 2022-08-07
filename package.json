@@ -39,7 +39,7 @@
     "storybook": "start-storybook -p 6006 --no-manager-cache --quiet",
     "start": "run-p build:watch storybook",
     "build-storybook": "build-storybook",
-    "release": "run-s build \"auto shipit\"",
+    "release": "yarn build && yarn auto shipit -d",
     "lint": "eslint . --cache --ext .js,.ts,.tsx",
     "lint:fix": "eslint . --cache --ext .js,.ts,.tsx --fix"
   },
