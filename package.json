@@ -14,7 +14,7 @@
     "url": "https://github.com/alienfast/storybook-addon-form"
   },
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com/"
+    "registry": "https://npm.pkg.github.com"
   },
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
