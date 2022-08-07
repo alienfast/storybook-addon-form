@@ -1,3 +1,15 @@
+# v1.0.2 (Sun Aug 07 2022)
+
+#### ⚠️ Pushed to `main`
+
+- update readme ([@rosskevin](https://github.com/rosskevin))
+
+#### Authors: 1
+
+- Kevin Ross ([@rosskevin](https://github.com/rosskevin))
+
+---
+
 # v1.0.1 (Sun Aug 07 2022)
 
 #### ⚠️ Pushed to `main`
