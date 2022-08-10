@@ -71,8 +71,10 @@ __metadata:
     "@storybook/components": ^7.0.0-alpha.18
     "@storybook/core-events": ^7.0.0-alpha.18
     "@storybook/theming": ^7.0.0-alpha.18
+    final-form: ^4.20.7
     react: ^16.8.0 || ^17.0.0
     react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0
+    react-json-view: ^1.21.3
   peerDependenciesMeta:
     react:
       optional: true
