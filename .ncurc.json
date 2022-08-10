@@ -3,3 +3,4 @@
   "packageManager": "yarn",
   "reject": ["react", "react-dom", "@types/react", "@types/react-dom"]
 }
+//  ncu -u -f "@storybook/*" -t @future

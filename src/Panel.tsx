@@ -8,9 +8,7 @@ import * as React from 'react'
 import { ADDON_ID, EVENTS } from './constants'
 import { DisplayJson } from './DisplayJson'
 
-interface PanelProps {
-  active: boolean
-}
+interface PanelProps {}
 
 export interface Results<FormValues = any> {
   errors: FormState<FormValues>['errors']
@@ -38,32 +36,30 @@ export const Panel: React.FC<PanelProps> = (props) => {
   const { errors, id, values } = results
   const info = id ? ` (${id})` : ''
   return (
-    <AddonPanel {...props}>
-      <TabsState initial="values" backgroundColor={convert(themes.normal).background.hoverable}>
-        <div id="values" title="Values" color={convert(themes.normal).color.secondary}>
-          <Placeholder>
-            <>{info}</>
-            <>
-              <DisplayJson o={values || {}} />
-            </>
-          </Placeholder>
-        </div>
-        <div id="errors" title={`Errors`} color={convert(themes.normal).color.negative}>
-          <Placeholder>
-            <>{info}</>
-            <>
-              <DisplayJson o={errors || {}} />
-            </>
-          </Placeholder>
-        </div>
-        {/* <div
+    <TabsState initial="values" backgroundColor={convert(themes.normal).background.hoverable}>
+      <div id="values" title="Values" color={convert(themes.normal).color.secondary}>
+        <Placeholder>
+          <>{info}</>
+          <>
+            <DisplayJson o={values || {}} />
+          </>
+        </Placeholder>
+      </div>
+      <div id="errors" title={`Errors`} color={convert(themes.normal).color.negative}>
+        <Placeholder>
+          <>{info}</>
+          <>
+            <DisplayJson o={errors || {}} />
+          </>
+        </Placeholder>
+      </div>
+      {/* <div
           id="warning"
           title={`${results.warning.length} Warning`}
           color={convert(themes.normal).color.warning}
         >
           <List items={results.warning} />
         </div> */}
-      </TabsState>
-    </AddonPanel>
+    </TabsState>
   )
 }
