@@ -34,5 +34,4 @@ const config: StorybookConfig = {
   framework: '@storybook/react-webpack5',
 }
 
-// export default config
-module.exports = config
+export default config
