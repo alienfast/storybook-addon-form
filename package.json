@@ -36,7 +36,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "storybook": "sb dev -p 6006 --no-manager-cache --debug-webpack",
     "start": "run-p build:watch storybook",
-    "build-storybook": "build-storybook",
+    "storybook:build": "sb build -o .storybook-out",
     "release": "yarn build && yarn auto shipit",
     "lint": "eslint . --cache --ext .js,.ts,.tsx",
     "lint:fix": "eslint . --cache --ext .js,.ts,.tsx --fix"
