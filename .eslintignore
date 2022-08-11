@@ -5,4 +5,4 @@ node_modules
 build
 dist
 .eslintrc.js
-preset.js
+manager.js

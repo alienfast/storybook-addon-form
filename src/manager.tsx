@@ -1,10 +1,10 @@
-import * as React from 'react'
 import { addons, types } from '@storybook/addons'
+import { API } from '@storybook/api'
+import { AddonPanel } from '@storybook/components'
+import * as React from 'react'
 
 import { ADDON_ID, PANEL_ID, PARAM_KEY } from './constants'
 import { Panel } from './Panel'
-import { AddonPanel } from '@storybook/components'
-import { API } from '@storybook/api'
 
 /**
  * @see https://github.com/storybookjs/storybook/blob/next/code/addons/controls/src/manager.tsx

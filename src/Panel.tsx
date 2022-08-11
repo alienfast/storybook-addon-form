@@ -1,5 +1,5 @@
 import { useAddonState, useChannel } from '@storybook/api'
-import { AddonPanel, Placeholder, TabsState } from '@storybook/components'
+import { Placeholder, TabsState } from '@storybook/components'
 import { STORY_CHANGED } from '@storybook/core-events'
 import { convert, themes } from '@storybook/theming'
 import { FormState } from 'final-form'
