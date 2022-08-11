@@ -1,7 +1,7 @@
 import type { StorybookConfig } from '@storybook/react-webpack5'
 import path from 'path'
 
-const mainConfig: StorybookConfig = {
+const config: StorybookConfig = {
   stories: [
     "../src/stories/**/*.stories.mdx",
     "../src/stories/**/*.stories.@(js|jsx|ts|tsx)",
@@ -34,4 +34,5 @@ const mainConfig: StorybookConfig = {
   framework: '@storybook/react-webpack5',
 }
 
-export default mainConfig
+// export default config
+module.exports = config
