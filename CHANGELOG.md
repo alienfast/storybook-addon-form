@@ -1,3 +1,15 @@
+# v2.0.1 (Fri Sep 30 2022)
+
+#### 🐛 Bug Fix
+
+- Switch to tsup and vite for building [#3](https://github.com/alienfast/storybook-addon-form/pull/3) ([@rosskevin](https://github.com/rosskevin))
+
+#### Authors: 1
+
+- Kevin Ross ([@rosskevin](https://github.com/rosskevin))
+
+---
+
 # v2.0.0 (Fri Sep 30 2022)
 
 #### 💥 Breaking Change
