@@ -1,3 +1,15 @@
+# v2.0.0 (Fri Sep 30 2022)
+
+#### 💥 Breaking Change
+
+- Storybook 7 [#2](https://github.com/alienfast/storybook-addon-form/pull/2) ([@rosskevin](https://github.com/rosskevin))
+
+#### Authors: 1
+
+- Kevin Ross ([@rosskevin](https://github.com/rosskevin))
+
+---
+
 # v1.0.2 (Sun Aug 07 2022)
 
 #### ⚠️ Pushed to `main`
