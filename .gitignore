@@ -20,3 +20,6 @@ tsconfig.tsbuildinfo
 
 
 node_modules
+
+# avoid workspace changed errors
+.yarn/cache/esbuild-*-64-*
