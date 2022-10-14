@@ -17,14 +17,16 @@
     "registry": "https://npm.pkg.github.com"
   },
   "type": "module",
-  "main": "./dist/index.cjs",
-  "module": "./dist/index.js",
-  "types": "./dist/index.d.ts",
+  "main-note": "This is to appease tsc in moduleResolution: node see https://github.com/rosskevin/ts-esm-workspaces/tree/bug-main-required-to-build",
+  "main": "./dist/index.js",
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
-      "import": "./dist/index.js",
-      "require": "./dist/index.cjs"
+      "import": "./dist/index.js"
+    },
+    "./manager": {
+      "types": "./dist/manager.d.ts",
+      "import": "./dist/manager.js"
     }
   },
   "files": [
@@ -36,8 +38,7 @@
   "scripts": {
     "clean": "rimraf ./dist",
     "clean:yarn": "rimraf yarn.lock node_modules .yarn/install-state.gz && yarn cache clean",
-    "prebuild": "yarn clean",
-    "build": "tsup",
+    "build": "yarn clean && tsup",
     "build:watch": "tsup --watch",
     "test": "echo \"Error: no test specified\" && exit 1",
     "storybook": "sb dev -p 6006 --no-manager-cache",
@@ -108,5 +109,6 @@
       "supported-frameworks"
     ],
     "icon": "https://user-images.githubusercontent.com/321738/63501763-88dbf600-c4cc-11e9-96cd-94adadc2fd72.png"
-  }
+  },
+  "author": "Kevin Ross <kevin.ross@alienfast.com>"
 }
