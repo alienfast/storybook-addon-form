@@ -1,3 +1,16 @@
+# v2.0.2 (Fri Oct 14 2022)
+
+#### ⚠️ Pushed to `main`
+
+- ESM only, properly define both exports, and add contants to export from the index for client use. ([@rosskevin](https://github.com/rosskevin))
+- clean:yarn (esbuild issue) ([@rosskevin](https://github.com/rosskevin))
+
+#### Authors: 1
+
+- Kevin Ross ([@rosskevin](https://github.com/rosskevin))
+
+---
+
 # v2.0.1 (Fri Sep 30 2022)
 
 #### 🐛 Bug Fix
