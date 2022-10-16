@@ -29,14 +29,7 @@ export interface ButtonProps {
  * Primary UI component for user interaction
  */
 export const Button = (props: ButtonProps) => {
-  const {
-    backgroundColor = null,
-    primary = false,
-    size = 'medium',
-    onClick = undefined,
-    label,
-    ...rest
-  } = props
+  const { backgroundColor = null, primary = false, size = 'medium', label, ...rest } = props
   const mode = primary ? 'storybook-button--primary' : 'storybook-button--secondary'
   return (
     <button

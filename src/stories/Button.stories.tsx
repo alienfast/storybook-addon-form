@@ -1,6 +1,10 @@
+import addons from '@storybook/addons'
 import * as React from 'react'
 
+import { EVENTS } from '../constants'
 import { Button, ButtonProps } from './Button'
+
+const channel = addons.getChannel()
 
 export default {
   title: 'Example/Button',
@@ -14,7 +18,17 @@ export default {
   },
 }
 
-const Template = (args: ButtonProps) => <Button {...args} />
+const onClick = () => {
+  const results = { errors: {}, id: 'MyFormId', values: { foo: 'bar', hello: 'world' } }
+  // eslint-disable-next-line no-console
+  console.clear()
+  // eslint-disable-next-line no-console
+  console.log('emitting', results)
+  // send the results to the channel.
+  channel.emit(EVENTS.RESULT, results)
+}
+
+const Template = (args: ButtonProps) => <Button onClick={onClick} {...args} />
 
 export const Primary = Template.bind({})
 Primary.args = {
