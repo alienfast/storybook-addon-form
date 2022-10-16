@@ -1,3 +1,17 @@
+# v2.0.6 (Sun Oct 16 2022)
+
+#### ⚠️ Pushed to `main`
+
+- change out json renderer, the old one was cjs only and we need esm compatibility ([@rosskevin](https://github.com/rosskevin))
+- Add demo event emitter to debug problem when events are received ([@rosskevin](https://github.com/rosskevin))
+- Add Results type to export for client use. ([@rosskevin](https://github.com/rosskevin))
+
+#### Authors: 1
+
+- Kevin Ross ([@rosskevin](https://github.com/rosskevin))
+
+---
+
 # v2.0.5 (Sun Oct 16 2022)
 
 #### ⚠️ Pushed to `main`
