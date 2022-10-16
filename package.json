@@ -17,8 +17,6 @@
     "registry": "https://npm.pkg.github.com"
   },
   "type": "module",
-  "main-note": "This is to appease tsc in moduleResolution: node see https://github.com/rosskevin/ts-esm-workspaces/tree/bug-main-required-to-build",
-  "main": "./dist/index.js",
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
@@ -27,7 +25,8 @@
     "./manager": {
       "types": "./dist/manager.d.ts",
       "import": "./dist/manager.js"
-    }
+    },
+    "./package.json": "./package.json"
   },
   "files": [
     "dist/**/*",
@@ -39,6 +38,7 @@
     "clean": "rimraf ./dist",
     "clean:yarn": "rimraf yarn.lock node_modules .yarn/install-state.gz && yarn cache clean",
     "build": "yarn clean && tsup",
+    "build:ide": "tsc",
     "build:watch": "tsup --watch",
     "test": "echo \"Error: no test specified\" && exit 1",
     "storybook": "sb dev -p 6006 --no-manager-cache",

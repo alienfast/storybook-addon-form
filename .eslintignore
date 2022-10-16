@@ -4,5 +4,5 @@ node_modules
 .babelrc.js
 build
 dist
-.eslintrc.js
+.eslintrc.cjs
 manager.js
