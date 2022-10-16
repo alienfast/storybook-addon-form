@@ -17,6 +17,8 @@
     "registry": "https://npm.pkg.github.com"
   },
   "type": "module",
+  "main-note": "This is ONLY to appease tsc in moduleResolution: node see https://github.com/rosskevin/ts-esm-workspaces/tree/bug-main-required-to-build",
+  "main": "./dist/index.js",
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
