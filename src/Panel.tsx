@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 import { useAddonState, useChannel } from '@storybook/api'
 import { Placeholder, TabsState } from '@storybook/components'
 import { STORY_CHANGED } from '@storybook/core-events'
@@ -18,18 +19,26 @@ export interface Results<FormValues = any> {
 
 export const Panel: React.FC<PanelProps> = (props) => {
   // https://storybook.js.org/docs/react/addons/addons-api#useaddonstate
-  const [results, setState] = useAddonState<Results>(ADDON_ID, {
+  const [results, setResults] = useAddonState<Results>(ADDON_ID, {
     errors: {},
     values: {},
   })
 
   // https://storybook.js.org/docs/react/addons/addons-api#usechannel
   const emit = useChannel({
-    // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
-    [EVENTS.RESULT]: (newResults) => setState(newResults),
-    [STORY_CHANGED]: (...args) => {
-      // eslint-disable-next-line no-console
+    [EVENTS.RESULT]: (newResults) => {
+      console.log('RESULT event: ', newResults)
+      console.log('old results', results)
+      console.log('calling setResults', setResults)
+      // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
+      setResults(newResults)
+    },
+    [STORY_CHANGED]: () => {
       console.log('panel story changed')
+      emit(EVENTS.RESULT, {
+        errors: {},
+        values: {},
+      })
     },
   })
 
