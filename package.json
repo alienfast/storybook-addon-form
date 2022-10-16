@@ -20,11 +20,18 @@
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
-      "import": "./dist/index.js"
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
     },
     "./manager": {
       "types": "./dist/manager.d.ts",
-      "import": "./dist/manager.js"
+      "import": "./dist/manager.js",
+      "require": "./dist/manager.cjs"
+    },
+    "./register": {
+      "types": "./dist/manager.d.ts",
+      "import": "./dist/manager.js",
+      "require": "./dist/manager.cjs"
     },
     "./package.json": "./package.json"
   },
