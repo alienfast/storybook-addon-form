@@ -1,3 +1,16 @@
+# v2.0.4 (Sun Oct 16 2022)
+
+#### ⚠️ Pushed to `main`
+
+- ncu ([@rosskevin](https://github.com/rosskevin))
+- Add back cjs build, and add the additional `./register` export similar to that of the controls addon ([@rosskevin](https://github.com/rosskevin))
+
+#### Authors: 1
+
+- Kevin Ross ([@rosskevin](https://github.com/rosskevin))
+
+---
+
 # v2.0.3 (Sun Oct 16 2022)
 
 #### ⚠️ Pushed to `main`
