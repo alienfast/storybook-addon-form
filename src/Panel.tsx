@@ -3,19 +3,12 @@ import { useAddonState, useChannel } from '@storybook/api'
 import { Placeholder, TabsState } from '@storybook/components'
 import { STORY_CHANGED } from '@storybook/core-events'
 import { convert, themes } from '@storybook/theming'
-import { FormState } from 'final-form'
 import * as React from 'react'
 
-import { ADDON_ID, EVENTS } from './constants'
+import { ADDON_ID, EVENTS, Results } from './constants'
 import { DisplayJson } from './DisplayJson'
 
 interface PanelProps {}
-
-export interface Results<FormValues = any> {
-  errors: FormState<FormValues>['errors']
-  id?: string
-  values: FormState<FormValues>['values']
-}
 
 export const Panel: React.FC<PanelProps> = (props) => {
   // https://storybook.js.org/docs/react/addons/addons-api#useaddonstate
