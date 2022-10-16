@@ -1,3 +1,15 @@
+# v2.0.3 (Sun Oct 16 2022)
+
+#### ⚠️ Pushed to `main`
+
+- Fix a few items related to making this esm only ([@rosskevin](https://github.com/rosskevin))
+
+#### Authors: 1
+
+- Kevin Ross ([@rosskevin](https://github.com/rosskevin))
+
+---
+
 # v2.0.2 (Fri Oct 14 2022)
 
 #### ⚠️ Pushed to `main`
