@@ -1,3 +1,18 @@
+# v2.0.7 (Fri Oct 28 2022)
+
+#### ⚠️ Pushed to `main`
+
+- no tests in this package ([@rosskevin](https://github.com/rosskevin))
+- install ([@rosskevin](https://github.com/rosskevin))
+- update build config ([@rosskevin](https://github.com/rosskevin))
+- ncu and clean yarn ([@rosskevin](https://github.com/rosskevin))
+
+#### Authors: 1
+
+- Kevin Ross ([@rosskevin](https://github.com/rosskevin))
+
+---
+
 # v2.0.6 (Sun Oct 16 2022)
 
 #### ⚠️ Pushed to `main`
