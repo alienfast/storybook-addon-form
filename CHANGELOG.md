@@ -1,3 +1,15 @@
+# v2.0.8 (Fri Oct 28 2022)
+
+#### ⚠️ Pushed to `main`
+
+- remove unused react-json-view ([@rosskevin](https://github.com/rosskevin))
+
+#### Authors: 1
+
+- Kevin Ross ([@rosskevin](https://github.com/rosskevin))
+
+---
+
 # v2.0.7 (Fri Oct 28 2022)
 
 #### ⚠️ Pushed to `main`
