@@ -9,10 +9,7 @@
   "engines": {
     "yarn": ">=2.0.0"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/alienfast/storybook-addon-form"
-  },
+  "repository": "https://github.com/alienfast/storybook-addon-form",
   "publishConfig": {
     "registry": "https://npm.pkg.github.com"
   },

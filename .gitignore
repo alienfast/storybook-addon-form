@@ -1,16 +1,14 @@
-dist/
-node_modules/
-storybook-static/
-build-storybook.log
-.DS_Store
-.env
-build
+*.log
+tmp
+/dist
+/node_modules
+.eslintcache
 tsconfig.tsbuildinfo
 
 # yarn zero install enabled
 .pnp.*
 .yarn/*
-!.yarn/cache
+#!.yarn/cache
 !.yarn/unplugged
 !.yarn/patches
 !.yarn/plugins
@@ -21,6 +19,5 @@ tsconfig.tsbuildinfo
 
 node_modules
 
-# avoid workspace changed errors for native versions
-.yarn/cache/esbuild-*
-.yarn/cache/@swc-core-*
+# ci will cache these instead
+.yarn/cache
