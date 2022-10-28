@@ -55,7 +55,7 @@
     "lint:fix": "eslint . --cache --ext .js,.ts,.tsx --fix"
   },
   "dependencies": {
-    "react-json-view": "^1.21.3"
+    "react-syntax-highlighter": "^15.5.0"
   },
   "devDependencies": {
     "@alienfast/eslint-config": "^4.0.5",
@@ -80,7 +80,6 @@
     "prettier": "^2.7.1",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
-    "react-syntax-highlighter": "^15.5.0",
     "rimraf": "^3.0.2",
     "storybook": "^7.0.0-alpha.34",
     "tsup": "^6.3.0",
