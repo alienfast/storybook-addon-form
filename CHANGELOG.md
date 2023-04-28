@@ -1,3 +1,15 @@
+# v2.0.9 (Fri Apr 28 2023)
+
+#### 🐛 Bug Fix
+
+- Update to storybook GA 7.0.7 [#4](https://github.com/alienfast/storybook-addon-form/pull/4) ([@rosskevin](https://github.com/rosskevin))
+
+#### Authors: 1
+
+- Kevin Ross ([@rosskevin](https://github.com/rosskevin))
+
+---
+
 # v2.0.8 (Fri Oct 28 2022)
 
 #### ⚠️ Pushed to `main`
