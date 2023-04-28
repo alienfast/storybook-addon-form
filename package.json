@@ -47,9 +47,7 @@
     "build:watch": "yarn build --watch",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "run-p build:watch 'storybook --quiet'",
-    "xxprerelease": "zx scripts/prepublish-checks.mjs",
     "release": "yarn build && auto shipit",
-    "xxeject-ts": "zx scripts/eject-typescript.mjs",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build -o .storybook-out",
     "lint": "eslint . --cache --ext .js,.ts,.tsx",
@@ -61,6 +59,9 @@
   "devDependencies": {
     "@alienfast/eslint-config": "^4.0.7",
     "@alienfast/tsconfig": "^1.0.1",
+    "@auto-it/all-contributors": "^10.46.0",
+    "@auto-it/first-time-contributor": "^10.46.0",
+    "@auto-it/released": "^10.46.0",
     "@storybook/addon-essentials": "^7.0.7",
     "@storybook/addon-interactions": "^7.0.7",
     "@storybook/addon-links": "^7.0.7",
@@ -123,5 +124,13 @@
     ],
     "icon": "https://user-images.githubusercontent.com/321738/63501763-88dbf600-c4cc-11e9-96cd-94adadc2fd72.png"
   },
-  "author": "Kevin Ross <kevin.ross@alienfast.com>"
+  "author": "Kevin Ross <kevin.ross@alienfast.com>",
+  "auto": {
+    "plugins": [
+      "npm",
+      "all-contributors",
+      "first-time-contributor",
+      "released"
+    ]
+  }
 }
