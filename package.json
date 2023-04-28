@@ -13,44 +13,61 @@
   "publishConfig": {
     "registry": "https://npm.pkg.github.com"
   },
-  "type": "module",
-  "main-note": "This is ONLY to appease tsc in moduleResolution: node see https://github.com/rosskevin/ts-esm-workspaces/tree/bug-main-required-to-build",
-  "main": "./dist/index.js",
+  "xtype": "module",
+  "xmain-note": "This is ONLY to appease tsc in moduleResolution: node see https://github.com/rosskevin/ts-esm-workspaces/tree/bug-main-required-to-build",
   "exports": {
     ".": {
-      "types": "./dist/index.d.ts",
-      "import": "./dist/index.js",
-      "require": "./dist/index.cjs"
+      "require": "./dist/index.js",
+      "import": "./dist/index.mjs",
+      "types": "./dist/index.d.ts"
     },
     "./manager": {
-      "types": "./dist/manager.d.ts",
-      "import": "./dist/manager.js",
-      "require": "./dist/manager.cjs"
+      "require": "./dist/manager.js",
+      "import": "./dist/manager.mjs",
+      "types": "./dist/manager.d.ts"
     },
-    "./register": {
-      "types": "./dist/manager.d.ts",
-      "import": "./dist/manager.js",
-      "require": "./dist/manager.cjs"
+    "./preview": {
+      "require": "./dist/preview.js",
+      "import": "./dist/preview.mjs",
+      "types": "./dist/preview.d.ts"
     },
     "./package.json": "./package.json"
   },
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
   "files": [
     "dist/**/*",
     "README.md",
     "*.js",
     "*.d.ts"
   ],
-  "scripts": {
+  "xxscripts": {
     "clean": "rimraf ./dist",
     "clean:yarn": "rimraf yarn.lock node_modules .yarn/install-state.gz && yarn cache clean",
     "build": "yarn clean && tsup",
     "build:ide": "tsc",
     "build:watch": "tsup --watch",
     "test": "echo \"no tests\"",
-    "storybook": "sb dev -p 6006",
+    "storybook": "storybook dev -p 6006",
     "start": "run-p build:watch storybook",
     "storybook:build": "storybook build -o .storybook-out",
     "release": "yarn build && yarn auto shipit",
+    "lint": "eslint . --cache --ext .js,.ts,.tsx",
+    "lint:fix": "eslint . --cache --ext .js,.ts,.tsx --fix"
+  },
+  "scripts": {
+    "clean": "rimraf ./dist",
+    "prebuild": "yarn clean",
+    "build": "tsup",
+    "build:watch": "yarn build --watch",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "run-p build:watch 'storybook --quiet'",
+    "xxprerelease": "zx scripts/prepublish-checks.mjs",
+    "release": "yarn build && auto shipit",
+    "xxeject-ts": "zx scripts/eject-typescript.mjs",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build",
     "lint": "eslint . --cache --ext .js,.ts,.tsx",
     "lint:fix": "eslint . --cache --ext .js,.ts,.tsx --fix"
   },
@@ -61,20 +78,22 @@
     "@alienfast/eslint-config": "^4.0.7",
     "@alienfast/tsconfig": "^1.0.1",
     "@storybook/addon-essentials": "^7.0.7",
-    "@storybook/addons": "^7.0.7",
-    "@storybook/api": "^7.0.7",
-    "@storybook/cli": "^7.0.7",
+    "@storybook/addon-interactions": "^7.0.7",
+    "@storybook/addon-links": "^7.0.7",
     "@storybook/components": "^7.0.7",
     "@storybook/core-events": "^7.0.7",
+    "@storybook/manager-api": "^7.0.7",
     "@storybook/preview-api": "^7.0.7",
     "@storybook/react": "^7.0.7",
     "@storybook/react-vite": "^7.0.7",
+    "@storybook/testing-library": "^0.1.0",
     "@storybook/theming": "^7.0.7",
-    "@swc/core": "^1.3.55",
+    "@storybook/types": "^7.0.7",
     "@types/eslint": "^8",
     "@types/react": "^16.8.6",
     "@types/react-dom": "^16.8.6",
     "@types/react-syntax-highlighter": "^15",
+    "@vitejs/plugin-react": "^4.0.0",
     "auto": "^10.46.0",
     "eslint": "^8.39.0",
     "final-form": "^4.20.9",
@@ -84,24 +103,20 @@
     "react-dom": "^16.8.6",
     "rimraf": "^5.0.0",
     "storybook": "^7.0.7",
-    "tsup": "^6.7.0",
-    "typescript": "^5.0.4"
+    "tsup": "^6.6.3",
+    "typescript": "^5.0.4",
+    "vite": "^4.1.4"
   },
   "peerDependencies": {
-    "@storybook/addons": "^7.0.7",
-    "@storybook/api": "^7.0.7",
-    "@storybook/components": "^7.0.7",
-    "@storybook/core-events": "^7.0.7",
-    "@storybook/theming": "^7.0.7",
-    "final-form": "^4.20.7",
-    "react": "^16.8.0 || ^17.0.0",
+    "@storybook/blocks": "^7.0.0",
+    "@storybook/components": "^7.0.0",
+    "@storybook/core-events": "^7.0.0",
+    "@storybook/manager-api": "^7.0.0",
+    "@storybook/preview-api": "^7.0.0",
+    "@storybook/theming": "^7.0.0",
+    "@storybook/types": "^7.0.0",
+    "react": "^16.8.0 || ^17.0.0 || ^18.0.0",
     "react-dom": "^16.8.0 || ^17.0.0 || ^18.0.0"
-  },
-  "resolutions": {
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6",
-    "@types/react": "^16.8.6",
-    "@types/react-dom": "^16.8.6"
   },
   "peerDependenciesMeta": {
     "react": {
@@ -110,6 +125,12 @@
     "react-dom": {
       "optional": true
     }
+  },
+  "resolutions": {
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "@types/react": "^16.8.6",
+    "@types/react-dom": "^16.8.6"
   },
   "storybook": {
     "displayName": "Addon Form",

@@ -1,24 +1,40 @@
-import type { StorybookConfig } from '@storybook/react-vite'
-
+import type { StorybookConfig } from "@storybook/react-vite";
 const config: StorybookConfig = {
-  stories: [
-    "../src/stories/**/*.stories.mdx",
-    "../src/stories/**/*.stories.@(js|jsx|ts|tsx)",
+  stories: ["../src/**/*.mdx", "../src/**/*.stories.@(js|jsx|ts|tsx)"],
+  addons: [
+    "@storybook/addon-links",
+    "@storybook/addon-essentials",
+    "@storybook/addon-interactions",
+    "./local-preset.js",
   ],
-  logLevel: 'debug',
-  addons: ["../manager.js", "@storybook/addon-essentials"],
-  core: {
-    channelOptions: { allowFunction: false, maxDepth: 10 },
-    disableTelemetry: true,
-  },
+  // logLevel: "debug",
   framework: {
-    name: '@storybook/react-vite',
+    name: "@storybook/react-vite",
     options: {},
   },
-  async viteFinal(config, options) {
-    // Add your configuration here
-    return config;
+  docs: {
+    autodocs: "tag",
   },
-}
+};
+export default config;
 
-export default config
+
+// import type { StorybookConfig } from '@storybook/react-vite';
+// const config: StorybookConfig = {
+//   stories: ["../src/**/*.mdx", "../src/**/*.stories.@(js|jsx|ts|tsx)"],
+//   addons: [
+//     "@storybook/addon-links",
+//     "@storybook/addon-essentials",
+//     "@storybook/addon-interactions",
+//     "./local-preset.js",
+//   ],
+//   framework: {
+//     name: "@storybook/react-vite",
+//     options: {},
+//   },
+//   docs: {
+//     autodocs: "tag",
+//   },
+// };
+
+// // NOTE see https://github.com/storybookjs/addon-kit for example
