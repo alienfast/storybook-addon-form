@@ -1,18 +1,10 @@
 {
-  // "$schema": "https://json.schemastore.org/tsconfig",
-  // "display": "...",
-  // "files": [],
-  // "compilerOptions": { "composite": true },
-  // "references": [{ "path": "./tsconfig.src.json" }, { "path": "./tsconfig.node.json" }]
-
   "$schema": "https://json.schemastore.org/tsconfig",
   "extends": "@alienfast/tsconfig/react-lib.json",
   "compilerOptions": {
-    // "composite": true,
     "outDir": "dist",
     "rootDir": "src"
   },
   "include": ["src"],
   "exclude": ["node_modules", "dist"]
-  // "references": [{ "path": "./tsconfig.node.json" }]
 }
