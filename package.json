@@ -5,7 +5,7 @@
   "keywords": [
     "storybook-addons"
   ],
-  "packageManager": "yarn@3.2.4",
+  "packageManager": "yarn@3.5.0",
   "engines": {
     "yarn": ">=2.0.0"
   },
@@ -15,22 +15,21 @@
   },
   "type": "module",
   "main-note": "This is ONLY to appease tsc in moduleResolution: node see https://github.com/rosskevin/ts-esm-workspaces/tree/bug-main-required-to-build",
-  "main": "./dist/index.js",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
   "exports": {
     ".": {
-      "types": "./dist/index.d.ts",
       "import": "./dist/index.js",
-      "require": "./dist/index.cjs"
+      "types": "./dist/index.d.ts"
     },
     "./manager": {
-      "types": "./dist/manager.d.ts",
       "import": "./dist/manager.js",
-      "require": "./dist/manager.cjs"
+      "types": "./dist/manager.d.ts"
     },
-    "./register": {
-      "types": "./dist/manager.d.ts",
-      "import": "./dist/manager.js",
-      "require": "./dist/manager.cjs"
+    "./preview": {
+      "import": "./dist/preview.js",
+      "types": "./dist/preview.d.ts"
     },
     "./package.json": "./package.json"
   },
@@ -43,14 +42,14 @@
   "scripts": {
     "clean": "rimraf ./dist",
     "clean:yarn": "rimraf yarn.lock node_modules .yarn/install-state.gz && yarn cache clean",
-    "build": "yarn clean && tsup",
-    "build:ide": "tsc",
-    "build:watch": "tsup --watch",
-    "test": "echo \"no tests\"",
-    "storybook": "sb dev -p 6006 --no-manager-cache",
-    "start": "run-p build:watch storybook",
-    "storybook:build": "storybook build -o .storybook-out",
-    "release": "yarn build && yarn auto shipit",
+    "prebuild": "yarn clean",
+    "build": "tsup",
+    "build:watch": "yarn build --watch",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "run-p build:watch 'storybook --quiet'",
+    "release": "yarn build && auto shipit",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build -o .storybook-out",
     "lint": "eslint . --cache --ext .js,.ts,.tsx",
     "lint:fix": "eslint . --cache --ext .js,.ts,.tsx --fix"
   },
@@ -58,48 +57,51 @@
     "react-syntax-highlighter": "^15.5.0"
   },
   "devDependencies": {
-    "@alienfast/eslint-config": "^4.0.5",
-    "@storybook/addon-essentials": "^7.0.0-alpha.46",
-    "@storybook/addons": "^7.0.0-alpha.46",
-    "@storybook/api": "^7.0.0-alpha.46",
-    "@storybook/cli": "^7.0.0-alpha.46",
-    "@storybook/components": "^7.0.0-alpha.46",
-    "@storybook/core-events": "^7.0.0-alpha.46",
-    "@storybook/react": "^7.0.0-alpha.46",
-    "@storybook/react-vite": "^7.0.0-alpha.46",
-    "@storybook/theming": "^7.0.0-alpha.46",
-    "@swc/core": "^1.3.11",
+    "@alienfast/eslint-config": "^4.0.7",
+    "@alienfast/tsconfig": "^1.0.1",
+    "@auto-it/all-contributors": "^10.46.0",
+    "@auto-it/first-time-contributor": "^10.46.0",
+    "@auto-it/released": "^10.46.0",
+    "@storybook/addon-essentials": "^7.0.7",
+    "@storybook/addon-interactions": "^7.0.7",
+    "@storybook/addon-links": "^7.0.7",
+    "@storybook/components": "^7.0.7",
+    "@storybook/core-events": "^7.0.7",
+    "@storybook/manager-api": "^7.0.7",
+    "@storybook/preview-api": "^7.0.7",
+    "@storybook/react": "^7.0.7",
+    "@storybook/react-vite": "^7.0.7",
+    "@storybook/testing-library": "^0.1.0",
+    "@storybook/theming": "^7.0.7",
+    "@storybook/types": "^7.0.7",
     "@types/eslint": "^8",
     "@types/react": "^16.8.6",
     "@types/react-dom": "^16.8.6",
     "@types/react-syntax-highlighter": "^15",
-    "auto": "^10.37.6",
-    "eslint": "^8.26.0",
-    "final-form": "^4.20.7",
+    "@vitejs/plugin-react": "^4.0.0",
+    "auto": "^10.46.0",
+    "eslint": "^8.39.0",
+    "final-form": "^4.20.9",
     "npm-run-all": "^4.1.5",
-    "prettier": "^2.7.1",
+    "prettier": "^2.8.8",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
-    "rimraf": "^3.0.2",
-    "storybook": "^7.0.0-alpha.34",
-    "tsup": "^6.3.0",
-    "typescript": "^4.8.4"
+    "rimraf": "^5.0.0",
+    "storybook": "^7.0.7",
+    "tsup": "^6.6.3",
+    "typescript": "^5.0.4",
+    "vite": "^4.1.4"
   },
   "peerDependencies": {
-    "@storybook/addons": "^7.0.0-alpha.46",
-    "@storybook/api": "^7.0.0-alpha.46",
-    "@storybook/components": "^7.0.0-alpha.46",
-    "@storybook/core-events": "^7.0.0-alpha.46",
-    "@storybook/theming": "^7.0.0-alpha.46",
-    "final-form": "^4.20.7",
-    "react": "^16.8.0 || ^17.0.0",
+    "@storybook/blocks": "^7.0.0",
+    "@storybook/components": "^7.0.0",
+    "@storybook/core-events": "^7.0.0",
+    "@storybook/manager-api": "^7.0.0",
+    "@storybook/preview-api": "^7.0.0",
+    "@storybook/theming": "^7.0.0",
+    "@storybook/types": "^7.0.0",
+    "react": "^16.8.0 || ^17.0.0 || ^18.0.0",
     "react-dom": "^16.8.0 || ^17.0.0 || ^18.0.0"
-  },
-  "resolutions": {
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6",
-    "@types/react": "^16.8.6",
-    "@types/react-dom": "^16.8.6"
   },
   "peerDependenciesMeta": {
     "react": {
@@ -109,6 +111,12 @@
       "optional": true
     }
   },
+  "resolutions": {
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "@types/react": "^16.8.6",
+    "@types/react-dom": "^16.8.6"
+  },
   "storybook": {
     "displayName": "Addon Form",
     "supportedFrameworks": [
@@ -116,5 +124,13 @@
     ],
     "icon": "https://user-images.githubusercontent.com/321738/63501763-88dbf600-c4cc-11e9-96cd-94adadc2fd72.png"
   },
-  "author": "Kevin Ross <kevin.ross@alienfast.com>"
+  "author": "Kevin Ross <kevin.ross@alienfast.com>",
+  "auto": {
+    "plugins": [
+      "npm",
+      "all-contributors",
+      "first-time-contributor",
+      "released"
+    ]
+  }
 }

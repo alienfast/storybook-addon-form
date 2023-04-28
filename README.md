@@ -2,12 +2,12 @@
 
 ### Development scripts
 
-- `yarn start` runs babel in watch mode and starts Storybook
+- `yarn start` runs tsup in watch mode and starts Storybook
 - `yarn build` build and package your addon code
 
 ## Release Management
 
-Simply put, push, and it will create a `patch` release.
+Simply commit and push, create a PR and it will create a `patch` canary release. Merge the PR and it will create a patch release. Change the label for major, minor, etc.
 
 ### Pull requests
 

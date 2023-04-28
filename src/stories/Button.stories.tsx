@@ -1,12 +1,12 @@
-import addons from '@storybook/addons'
-import * as React from 'react'
+import { addons } from '@storybook/preview-api'
+import { Meta, StoryObj } from '@storybook/react'
 
 import { EVENTS } from '../constants'
-import { Button, ButtonProps } from './Button'
+import { Button } from './Button'
 
 const channel = addons.getChannel()
 
-export default {
+const meta: Meta<typeof Button> = {
   title: 'Example/Button',
   component: Button,
   parameters: {
@@ -28,27 +28,63 @@ const onClick = () => {
   channel.emit(EVENTS.RESULT, results)
 }
 
-const Template = (args: ButtonProps) => <Button onClick={onClick} {...args} />
+export default meta
+type Story = StoryObj<typeof Button>
 
-export const Primary = Template.bind({})
-Primary.args = {
-  primary: true,
-  label: 'Button',
+// More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
+export const Primary: Story = {
+  // More on args: https://storybook.js.org/docs/react/writing-stories/args
+  args: {
+    primary: true,
+    label: 'Button',
+    onClick,
+  },
 }
 
-export const Secondary = Template.bind({})
-Secondary.args = {
-  label: 'Button',
+export const Secondary: Story = {
+  args: {
+    label: 'Button',
+    onClick,
+  },
 }
 
-export const Large = Template.bind({})
-Large.args = {
-  size: 'large',
-  label: 'Button',
+export const Large: Story = {
+  args: {
+    size: 'large',
+    label: 'Button',
+    onClick,
+  },
 }
 
-export const Small = Template.bind({})
-Small.args = {
-  size: 'small',
-  label: 'Button',
+export const Small: Story = {
+  args: {
+    size: 'small',
+    label: 'Button',
+    onClick,
+  },
 }
+
+// const Template: StoryFn<ButtonProps> = (args) => <Button onClick={onClick} {...args} />
+
+// export const Primary = Template.bind({})
+// Primary.args = {
+//   primary: true,
+//   label: 'Button',
+// }
+
+// export const Secondary = Template.bind({})
+// Secondary.args = {
+//   label: 'Button',
+// }
+
+// export const Large = Template.bind({})
+// Large.args = {
+//   size: 'large',
+//   label: 'Button',
+// }
+
+// export const Small = Template.bind({})
+// Small.args = {
+//   size: 'small',
+//   label: 'Button',
+// }

@@ -1,6 +1,6 @@
-import { useAddonState, useChannel } from '@storybook/api'
 import { Placeholder, TabsState } from '@storybook/components'
 import { STORY_CHANGED } from '@storybook/core-events'
+import { useAddonState, useChannel } from '@storybook/manager-api'
 import { convert, themes } from '@storybook/theming'
 import * as React from 'react'
 
