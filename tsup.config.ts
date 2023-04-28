@@ -4,8 +4,8 @@ export default defineConfig((options) => ({
   entry: ['src/index.ts', 'src/preview.ts', 'src/manager.tsx'],
   splitting: false,
   minify: !options.watch,
-  format: ['cjs', 'esm'],
-  // format: ['esm'],
+  // format: ['cjs', 'esm'],
+  format: ['esm'],
   dts: {
     resolve: true,
   },

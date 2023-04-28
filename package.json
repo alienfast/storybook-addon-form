@@ -13,51 +13,35 @@
   "publishConfig": {
     "registry": "https://npm.pkg.github.com"
   },
-  "xtype": "module",
-  "xmain-note": "This is ONLY to appease tsc in moduleResolution: node see https://github.com/rosskevin/ts-esm-workspaces/tree/bug-main-required-to-build",
+  "type": "module",
+  "main-note": "This is ONLY to appease tsc in moduleResolution: node see https://github.com/rosskevin/ts-esm-workspaces/tree/bug-main-required-to-build",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
   "exports": {
     ".": {
-      "require": "./dist/index.js",
-      "import": "./dist/index.mjs",
+      "import": "./dist/index.js",
       "types": "./dist/index.d.ts"
     },
     "./manager": {
-      "require": "./dist/manager.js",
-      "import": "./dist/manager.mjs",
+      "import": "./dist/manager.js",
       "types": "./dist/manager.d.ts"
     },
     "./preview": {
-      "require": "./dist/preview.js",
-      "import": "./dist/preview.mjs",
+      "import": "./dist/preview.js",
       "types": "./dist/preview.d.ts"
     },
     "./package.json": "./package.json"
   },
-  "main": "dist/index.js",
-  "module": "dist/index.mjs",
-  "types": "dist/index.d.ts",
   "files": [
     "dist/**/*",
     "README.md",
     "*.js",
     "*.d.ts"
   ],
-  "xxscripts": {
-    "clean": "rimraf ./dist",
-    "clean:yarn": "rimraf yarn.lock node_modules .yarn/install-state.gz && yarn cache clean",
-    "build": "yarn clean && tsup",
-    "build:ide": "tsc",
-    "build:watch": "tsup --watch",
-    "test": "echo \"no tests\"",
-    "storybook": "storybook dev -p 6006",
-    "start": "run-p build:watch storybook",
-    "storybook:build": "storybook build -o .storybook-out",
-    "release": "yarn build && yarn auto shipit",
-    "lint": "eslint . --cache --ext .js,.ts,.tsx",
-    "lint:fix": "eslint . --cache --ext .js,.ts,.tsx --fix"
-  },
   "scripts": {
     "clean": "rimraf ./dist",
+    "clean:yarn": "rimraf yarn.lock node_modules .yarn/install-state.gz && yarn cache clean",
     "prebuild": "yarn clean",
     "build": "tsup",
     "build:watch": "yarn build --watch",
@@ -67,7 +51,7 @@
     "release": "yarn build && auto shipit",
     "xxeject-ts": "zx scripts/eject-typescript.mjs",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build",
+    "build-storybook": "storybook build -o .storybook-out",
     "lint": "eslint . --cache --ext .js,.ts,.tsx",
     "lint:fix": "eslint . --cache --ext .js,.ts,.tsx --fix"
   },
