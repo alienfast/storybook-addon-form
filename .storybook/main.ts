@@ -11,13 +11,14 @@ const config: StorybookConfig = {
     channelOptions: { allowFunction: false, maxDepth: 10 },
     disableTelemetry: true,
   },
-  // staticDirs: ['../public'],
-  features: {
-    storyStoreV7: true,
-    buildStoriesJson: true,
-    breakingChangesV7: true,
+  framework: {
+    name: '@storybook/react-vite',
+    options: {},
   },
-  framework: '@storybook/react-vite',
+  async viteFinal(config, options) {
+    // Add your configuration here
+    return config;
+  },
 }
 
 export default config
