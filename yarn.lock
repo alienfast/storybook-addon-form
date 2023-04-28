@@ -41,6 +41,7 @@ __metadata:
     "@storybook/cli": ^7.0.7
     "@storybook/components": ^7.0.7
     "@storybook/core-events": ^7.0.7
+    "@storybook/preview-api": ^7.0.7
     "@storybook/react": ^7.0.7
     "@storybook/react-vite": ^7.0.7
     "@storybook/theming": ^7.0.7
@@ -3351,7 +3352,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@storybook/preview-api@npm:7.0.7":
+"@storybook/preview-api@npm:7.0.7, @storybook/preview-api@npm:^7.0.7":
   version: 7.0.7
   resolution: "@storybook/preview-api@npm:7.0.7"
   dependencies:

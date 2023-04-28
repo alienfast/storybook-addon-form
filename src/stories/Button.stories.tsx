@@ -1,4 +1,5 @@
-import addons from '@storybook/addons'
+import { addons } from '@storybook/preview-api'
+import { StoryFn } from '@storybook/react'
 import * as React from 'react'
 
 import { EVENTS } from '../constants'
@@ -28,7 +29,7 @@ const onClick = () => {
   channel.emit(EVENTS.RESULT, results)
 }
 
-const Template = (args: ButtonProps) => <Button onClick={onClick} {...args} />
+const Template: StoryFn<ButtonProps> = (args) => <Button onClick={onClick} {...args} />
 
 export const Primary = Template.bind({})
 Primary.args = {
