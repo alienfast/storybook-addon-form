@@ -1,3 +1,15 @@
+# v2.0.10 (Sun Apr 30 2023)
+
+#### 🐛 Bug Fix
+
+- Fix could not resolve addon [#5](https://github.com/alienfast/storybook-addon-form/pull/5) ([@rosskevin](https://github.com/rosskevin))
+
+#### Authors: 1
+
+- Kevin Ross ([@rosskevin](https://github.com/rosskevin))
+
+---
+
 # v2.0.9 (Fri Apr 28 2023)
 
 #### 🐛 Bug Fix
