@@ -16,20 +16,22 @@
   "type": "module",
   "main-note": "This is ONLY to appease tsc in moduleResolution: node see https://github.com/rosskevin/ts-esm-workspaces/tree/bug-main-required-to-build",
   "main": "dist/index.js",
-  "module": "dist/index.mjs",
-  "types": "dist/index.d.ts",
+  "xxtypes": "dist/index.d.ts",
   "exports": {
     ".": {
       "import": "./dist/index.js",
-      "types": "./dist/index.d.ts"
+      "types": "./dist/index.d.ts",
+      "require": "./dist/index.cjs"
     },
     "./manager": {
       "import": "./dist/manager.js",
-      "types": "./dist/manager.d.ts"
+      "types": "./dist/manager.d.ts",
+      "require": "./dist/manager.cjs"
     },
     "./preview": {
       "import": "./dist/preview.js",
-      "types": "./dist/preview.d.ts"
+      "types": "./dist/preview.d.ts",
+      "require": "./dist/preview.cjs"
     },
     "./package.json": "./package.json"
   },
