@@ -1,3 +1,15 @@
+# v2.0.11 (Thu May 25 2023)
+
+#### 🐛 Bug Fix
+
+- ncu [#6](https://github.com/alienfast/storybook-addon-form/pull/6) ([@rosskevin](https://github.com/rosskevin))
+
+#### Authors: 1
+
+- Kevin Ross ([@rosskevin](https://github.com/rosskevin))
+
+---
+
 # v2.0.10 (Sun Apr 30 2023)
 
 #### 🐛 Bug Fix
