@@ -35,7 +35,7 @@ export const Panel: React.FC<PanelProps> = (props) => {
   })
 
   const { id, state } = results
-  const { errors, values } = state
+  const { errors, values } = state || {}
   const info = id ? ` (${id})` : ''
   // console.log('render', errors, values)
   return (
