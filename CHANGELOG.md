@@ -1,3 +1,15 @@
+# v2.0.12 (Sun Jun 18 2023)
+
+#### 🐛 Bug Fix
+
+- Add all form state to an additional tab for easier inspection of all … [#7](https://github.com/alienfast/storybook-addon-form/pull/7) ([@rosskevin](https://github.com/rosskevin))
+
+#### Authors: 1
+
+- Kevin Ross ([@rosskevin](https://github.com/rosskevin))
+
+---
+
 # v2.0.11 (Thu May 25 2023)
 
 #### 🐛 Bug Fix
