@@ -35,7 +35,7 @@ export const Panel: React.FC<PanelProps> = (props) => {
   })
 
   const { id, state } = results
-  const { errors, values } = state || {}
+  const { errors, initialValues, values, ...restState } = state || {}
   const info = id ? ` (${id})` : ''
   // console.log('render', errors, values)
   return (
@@ -52,10 +52,16 @@ export const Panel: React.FC<PanelProps> = (props) => {
           <DisplayJson o={errors || {}} />
         </Placeholder>
       </div>
-      <div id="state" title="State" color={convert(themes.normal).color.ancillary}>
+      <div id="initialValues" title="Initial Values" color={convert(themes.normal).color.secondary}>
         <Placeholder>
           <>{info}</>
-          <DisplayJson o={state || {}} />
+          <DisplayJson o={initialValues || {}} />
+        </Placeholder>
+      </div>
+      <div id="state" title="State" color={convert(themes.normal).color.secondary}>
+        <Placeholder>
+          <>Rest of form state{info}</>
+          <DisplayJson o={restState || {}} />
         </Placeholder>
       </div>
       {/* <div
