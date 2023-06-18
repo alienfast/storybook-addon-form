@@ -1,9 +1,8 @@
 import { FormState } from 'final-form'
 
 export interface Results<FormValues = any> {
-  errors: FormState<FormValues>['errors']
+  state: FormState<FormValues>
   id?: string
-  values: FormState<FormValues>['values']
 }
 
 export const ADDON_ID = 'alienfast-storybook-addon-form' as const

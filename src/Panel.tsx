@@ -12,8 +12,10 @@ interface PanelProps {}
 export const Panel: React.FC<PanelProps> = (props) => {
   // https://storybook.js.org/docs/react/addons/addons-api#useaddonstate
   const [results, setResults] = useAddonState<Results>(ADDON_ID, {
-    errors: {},
-    values: {},
+    state: {
+      errors: {},
+      values: {},
+    } as any,
   })
 
   // https://storybook.js.org/docs/react/addons/addons-api#usechannel
@@ -32,7 +34,8 @@ export const Panel: React.FC<PanelProps> = (props) => {
     },
   })
 
-  const { errors, id, values } = results
+  const { id, state } = results
+  const { errors, values } = state
   const info = id ? ` (${id})` : ''
   // console.log('render', errors, values)
   return (
@@ -40,19 +43,19 @@ export const Panel: React.FC<PanelProps> = (props) => {
       <div id="values" title="Values" color={convert(themes.normal).color.secondary}>
         <Placeholder>
           <>{info}</>
-          <>
-            {/* {String(values)} */}
-            <DisplayJson o={values || {}} />
-          </>
+          <DisplayJson o={values || {}} />
         </Placeholder>
       </div>
       <div id="errors" title={`Errors`} color={convert(themes.normal).color.negative}>
         <Placeholder>
           <>{info}</>
-          <>
-            {/* {String(errors)} */}
-            <DisplayJson o={errors || {}} />
-          </>
+          <DisplayJson o={errors || {}} />
+        </Placeholder>
+      </div>
+      <div id="state" title="State" color={convert(themes.normal).color.ancillary}>
+        <Placeholder>
+          <>{info}</>
+          <DisplayJson o={state || {}} />
         </Placeholder>
       </div>
       {/* <div
