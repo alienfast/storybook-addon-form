@@ -1,3 +1,15 @@
+# v2.0.14 (Sun Jun 18 2023)
+
+#### ⚠️ Pushed to `main`
+
+- segment initialValues, errors, values from the rest of the form state ([@rosskevin](https://github.com/rosskevin))
+
+#### Authors: 1
+
+- Kevin Ross ([@rosskevin](https://github.com/rosskevin))
+
+---
+
 # v2.0.13 (Sun Jun 18 2023)
 
 #### ⚠️ Pushed to `main`
