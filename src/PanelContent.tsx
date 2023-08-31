@@ -17,23 +17,23 @@ export const PanelContent: React.FC<PanelProps> = (props: PanelProps) => {
   const { errors, initialValues, values, ...restState } = state || {}
 
   const info = id ? ` (${id})` : ''
-  console.log(
-    'render',
-    'id:',
-    id,
-    'errors:',
-    errors,
-    'initialValues:',
-    initialValues,
-    'values:',
-    values,
-    'restState:',
-    restState,
-  )
+  // console.log(
+  //   'render',
+  //   'id:',
+  //   id,
+  //   'errors:',
+  //   errors,
+  //   'initialValues:',
+  //   initialValues,
+  //   'values:',
+  //   values,
+  //   'restState:',
+  //   restState,
+  // )
   return (
     <>
       <div>
-        hack 1<div>raw: {String(values)}</div>
+        hack 1 until the storybook up Tabs component is fixed and allows for updates:
         <DisplayJson o={values || {}} />
       </div>
 
