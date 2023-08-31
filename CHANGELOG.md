@@ -1,3 +1,15 @@
+# v2.0.16 (Thu Aug 31 2023)
+
+#### ⚠️ Pushed to `main`
+
+- kill console logs ([@rosskevin](https://github.com/rosskevin))
+
+#### Authors: 1
+
+- Kevin Ross ([@rosskevin](https://github.com/rosskevin))
+
+---
+
 # v2.0.15 (Thu Aug 31 2023)
 
 #### ⚠️ Pushed to `main`
