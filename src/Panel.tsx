@@ -1,76 +1,40 @@
-import { Placeholder, TabsState } from '@storybook/components'
+import { AddonPanel } from '@storybook/components'
 import { STORY_CHANGED } from '@storybook/core-events'
 import { useAddonState, useChannel } from '@storybook/manager-api'
-import { convert, themes } from '@storybook/theming'
-import * as React from 'react'
+import React from 'react'
 
 import { ADDON_ID, EVENTS, Results } from './constants'
-import { DisplayJson } from './DisplayJson'
+import { PanelContent } from './PanelContent'
 
-interface PanelProps {}
+interface PanelProps {
+  active: boolean
+}
 
 export const Panel: React.FC<PanelProps> = (props) => {
   // https://storybook.js.org/docs/react/addons/addons-api#useaddonstate
-  const [results, setResults] = useAddonState<Results>(ADDON_ID, {
-    state: {
-      errors: {},
-      values: {},
-    } as any,
-  })
+  const [results, setResults] = useAddonState<Results | undefined>(ADDON_ID, undefined)
 
+  // // https://storybook.js.org/docs/react/addons/addons-api#usechannel
+  // const emit = useChannel({
+  //   [EVENTS.RESULT]: (newResults) => setResults(newResults),
+  // })
   // https://storybook.js.org/docs/react/addons/addons-api#usechannel
   const emit = useChannel({
     [EVENTS.RESULT]: (newResults) => {
-      // console.log('RESULT event: ', newResults)
+      console.log('RESULT event calling setResult: ', newResults)
+
       // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
-      setResults(newResults)
+      setResults(newResults as any)
     },
     [STORY_CHANGED]: () => {
-      // console.log('panel story changed')
-      emit(EVENTS.RESULT, {
-        errors: {},
-        values: {},
-      })
+      console.log('panel story changed')
+      emit(EVENTS.RESULT, undefined)
     },
   })
 
-  const { id, state } = results
-  const { errors, initialValues, values, ...restState } = state || {}
-  const info = id ? ` (${id})` : ''
-  // console.log('render', errors, values)
   return (
-    <TabsState initial="values" backgroundColor={convert(themes.normal).background.hoverable}>
-      <div id="values" title="Values" color={convert(themes.normal).color.secondary}>
-        <Placeholder>
-          <>{info}</>
-          <DisplayJson o={values || {}} />
-        </Placeholder>
-      </div>
-      <div id="errors" title={`Errors`} color={convert(themes.normal).color.negative}>
-        <Placeholder>
-          <>{info}</>
-          <DisplayJson o={errors || {}} />
-        </Placeholder>
-      </div>
-      <div id="initialValues" title="Initial Values" color={convert(themes.normal).color.secondary}>
-        <Placeholder>
-          <>{info}</>
-          <DisplayJson o={initialValues || {}} />
-        </Placeholder>
-      </div>
-      <div id="state" title="State" color={convert(themes.normal).color.secondary}>
-        <Placeholder>
-          <>Rest of form state{info}</>
-          <DisplayJson o={restState || {}} />
-        </Placeholder>
-      </div>
-      {/* <div
-          id="warning"
-          title={`${results.warning.length} Warning`}
-          color={convert(themes.normal).color.warning}
-        >
-          <List items={results.warning} />
-        </div> */}
-    </TabsState>
+    <AddonPanel {...props}>
+      <PanelContent results={results} />
+    </AddonPanel>
   )
 }

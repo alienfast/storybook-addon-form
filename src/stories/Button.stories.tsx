@@ -18,12 +18,27 @@ const meta: Meta<typeof Button> = {
   },
 }
 
+let counter = 0
+
 const onClick = () => {
-  const results = { errors: {}, id: 'MyFormId', values: { foo: 'bar', hello: 'world' } }
+  const results = {
+    id: 'MyFormId',
+    state: {
+      errors: {},
+      values: { foo: `bar-${++counter}`, hello: `world-${++counter}` },
+    },
+  }
   // eslint-disable-next-line no-console
   console.clear()
   // eslint-disable-next-line no-console
-  console.log('emitting', results)
+  console.log(
+    'emitting',
+    results,
+    'with values',
+    results.state.values,
+    'with errors',
+    results.state.errors,
+  )
   // send the results to the channel.
   channel.emit(EVENTS.RESULT, results)
 }
@@ -36,14 +51,14 @@ export const Primary: Story = {
   // More on args: https://storybook.js.org/docs/react/writing-stories/args
   args: {
     primary: true,
-    label: 'Button',
+    label: `Button ${counter}`,
     onClick,
   },
 }
 
 export const Secondary: Story = {
   args: {
-    label: 'Button',
+    label: `Button ${counter}`,
     onClick,
   },
 }
@@ -51,7 +66,7 @@ export const Secondary: Story = {
 export const Large: Story = {
   args: {
     size: 'large',
-    label: 'Button',
+    label: `Button ${counter}`,
     onClick,
   },
 }
@@ -59,7 +74,7 @@ export const Large: Story = {
 export const Small: Story = {
   args: {
     size: 'small',
-    label: 'Button',
+    label: `Button ${counter}`,
     onClick,
   },
 }
@@ -69,22 +84,22 @@ export const Small: Story = {
 // export const Primary = Template.bind({})
 // Primary.args = {
 //   primary: true,
-//   label: 'Button',
+//   label: `Button ${counter}`,
 // }
 
 // export const Secondary = Template.bind({})
 // Secondary.args = {
-//   label: 'Button',
+//   label: `Button ${counter}`,
 // }
 
 // export const Large = Template.bind({})
 // Large.args = {
 //   size: 'large',
-//   label: 'Button',
+//   label: `Button ${counter}`,
 // }
 
 // export const Small = Template.bind({})
 // Small.args = {
 //   size: 'small',
-//   label: 'Button',
+//   label: `Button ${counter}`,
 // }
