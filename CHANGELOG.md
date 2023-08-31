@@ -1,3 +1,17 @@
+# v2.0.15 (Thu Aug 31 2023)
+
+#### ⚠️ Pushed to `main`
+
+- Update to sb 7.4, Tabs are still bugged. This contains a hack for the time being and is ugly. ([@rosskevin](https://github.com/rosskevin))
+- ncu ([@rosskevin](https://github.com/rosskevin))
+- fix deprecated key ([@rosskevin](https://github.com/rosskevin))
+
+#### Authors: 1
+
+- Kevin Ross ([@rosskevin](https://github.com/rosskevin))
+
+---
+
 # v2.0.14 (Sun Jun 18 2023)
 
 #### ⚠️ Pushed to `main`
