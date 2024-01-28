@@ -1,6 +1,7 @@
 import { Icons, IconsProps } from '@storybook/components'
 import { convert, styled, themes } from '@storybook/theming'
-import React, { Fragment, useState } from 'react'
+import * as React from 'react'
+import { Fragment, useState } from 'react'
 
 const ListWrapper = styled.ul({
   listStyle: 'none',
