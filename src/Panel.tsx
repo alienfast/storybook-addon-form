@@ -1,7 +1,7 @@
 import { AddonPanel } from '@storybook/components'
 import { STORY_CHANGED } from '@storybook/core-events'
 import { useAddonState, useChannel } from '@storybook/manager-api'
-import React from 'react'
+import * as React from 'react'
 
 import { ADDON_ID, EVENTS, Results } from './constants'
 import { PanelContent } from './PanelContent'
