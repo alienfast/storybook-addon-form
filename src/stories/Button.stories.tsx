@@ -24,8 +24,14 @@ const onClick = () => {
   const results = {
     id: 'MyFormId',
     state: {
-      errors: {},
+      errors: { bar: `baz-${++counter}` },
       values: { foo: `bar-${++counter}`, hello: `world-${++counter}` },
+      initialValues: { foo: `bar-0`, hello: `world-0` },
+      // rest state
+      dirtyFields: {
+        foo: `bar-${++counter}`,
+        hello: `world-${++counter}`,
+      },
     },
   }
   // eslint-disable-next-line no-console
@@ -38,6 +44,8 @@ const onClick = () => {
     results.state.values,
     'with errors',
     results.state.errors,
+    'with initialValues',
+    results.state.initialValues,
   )
   // send the results to the channel.
   channel.emit(EVENTS.RESULT, results)
