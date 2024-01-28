@@ -48,7 +48,7 @@
     "build": "tsup",
     "build:watch": "yarn build --watch",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "run-p build:watch 'storybook --quiet'",
+    "start": "run-p build:watch storybook",
     "release": "yarn build && auto shipit",
     "storybook": "rimraf node_modules/.cache || true && storybook dev -p 6006",
     "build-storybook": "storybook build -o .storybook-out",
