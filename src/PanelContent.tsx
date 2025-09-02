@@ -1,9 +1,10 @@
-import { TabsState } from '@storybook/components'
-import { convert, themes } from '@storybook/theming'
+/* eslint-disable @typescript-eslint/no-unsafe-assignment */
 import * as React from 'react'
+import { TabsState } from 'storybook/internal/components'
+import { convert, themes } from 'storybook/theming'
 
-import { Results } from './constants'
-import { DisplayJson } from './DisplayJson'
+import { Results } from './constants.js'
+import { DisplayJson } from './DisplayJson.js'
 
 interface PanelProps {
   results?: Results

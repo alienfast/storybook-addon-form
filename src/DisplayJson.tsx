@@ -1,11 +1,9 @@
-import { convert, styled, themes } from '@storybook/theming'
 import * as React from 'react'
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
 import { a11yDark } from 'react-syntax-highlighter/dist/esm/styles/prism'
+import { convert, styled, themes } from 'storybook/theming'
 
-const Container = styled.div({
-  padding: convert(themes.normal).layoutMargin,
-})
+const Container = styled.div({ padding: convert(themes.normal).layoutMargin })
 
 export const DisplayJson = (props: { o: object }) => {
   const { o } = props
