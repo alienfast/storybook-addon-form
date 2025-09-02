@@ -1,3 +1,15 @@
+# v3.0.0 (Tue Sep 02 2025)
+
+#### 💥 Breaking Change
+
+- ncu, update everything to storybook 9.x, eslint 9 [#9](https://github.com/alienfast/storybook-addon-form/pull/9) ([@rosskevin](https://github.com/rosskevin))
+
+#### Authors: 1
+
+- Kevin Ross ([@rosskevin](https://github.com/rosskevin))
+
+---
+
 # v2.0.17 (Sun Jan 28 2024)
 
 #### 🐛 Bug Fix
