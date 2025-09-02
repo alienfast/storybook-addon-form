@@ -1,10 +1,10 @@
-import { AddonPanel } from '@storybook/components'
-import { STORY_CHANGED } from '@storybook/core-events'
-import { useAddonState, useChannel } from '@storybook/manager-api'
 import * as React from 'react'
+import { AddonPanel } from 'storybook/internal/components'
+import { STORY_CHANGED } from 'storybook/internal/core-events'
+import { useAddonState, useChannel } from 'storybook/manager-api'
 
-import { ADDON_ID, EVENTS, Results } from './constants'
-import { PanelContent } from './PanelContent'
+import { ADDON_ID, EVENTS, Results } from './constants.js'
+import { PanelContent } from './PanelContent.js'
 
 interface PanelProps {
   active: boolean

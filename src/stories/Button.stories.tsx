@@ -1,8 +1,8 @@
-import { addons } from '@storybook/preview-api'
-import { Meta, StoryObj } from '@storybook/react'
+import { Meta, StoryObj } from '@storybook/react-vite'
+import { addons } from 'storybook/preview-api'
 
-import { EVENTS } from '../constants'
-import { Button } from './Button'
+import { EVENTS } from '../constants.js'
+import { Button } from './Button.js'
 
 const channel = addons.getChannel()
 
@@ -28,10 +28,7 @@ const onClick = () => {
       values: { foo: `bar-${++counter}`, hello: `world-${++counter}` },
       initialValues: { foo: `bar-0`, hello: `world-0` },
       // rest state
-      dirtyFields: {
-        foo: `bar-${++counter}`,
-        hello: `world-${++counter}`,
-      },
+      dirtyFields: { foo: `bar-${++counter}`, hello: `world-${++counter}` },
     },
   }
   // eslint-disable-next-line no-console
@@ -57,35 +54,14 @@ type Story = StoryObj<typeof Button>
 // More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
 export const Primary: Story = {
   // More on args: https://storybook.js.org/docs/react/writing-stories/args
-  args: {
-    primary: true,
-    label: `Button ${counter}`,
-    onClick,
-  },
+  args: { primary: true, label: `Button ${counter}`, onClick },
 }
 
-export const Secondary: Story = {
-  args: {
-    label: `Button ${counter}`,
-    onClick,
-  },
-}
+export const Secondary: Story = { args: { label: `Button ${counter}`, onClick } }
 
-export const Large: Story = {
-  args: {
-    size: 'large',
-    label: `Button ${counter}`,
-    onClick,
-  },
-}
+export const Large: Story = { args: { size: 'large', label: `Button ${counter}`, onClick } }
 
-export const Small: Story = {
-  args: {
-    size: 'small',
-    label: `Button ${counter}`,
-    onClick,
-  },
-}
+export const Small: Story = { args: { size: 'small', label: `Button ${counter}`, onClick } }
 
 // const Template: StoryFn<ButtonProps> = (args) => <Button onClick={onClick} {...args} />
 

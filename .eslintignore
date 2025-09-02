@@ -1,8 +1,0 @@
-node_modules
-.yarn
-.storybook
-.babelrc.js
-build
-dist
-.eslintrc.cjs
-manager.js

@@ -1,18 +1,20 @@
-import type { Preview } from "@storybook/react";
+import type { Preview } from '@storybook/react-vite'
 
 const preview: Preview = {
-  parameters: {
-    backgrounds: {
-      default: "light",
-    },
-    actions: { argTypesRegex: "^on[A-Z].*" },
-    controls: {
-      matchers: {
-        color: /(background|color)$/i,
-        date: /Date$/,
-      },
-    },
-  },
-};
+  parameters: { controls: { matchers: { color: /(background|color)$/i, date: /Date$/ } } },
+  initialGlobals: { background: { value: 'light' } },
+}
 
-export default preview;
+export default preview
+
+// import type { Preview } from '@storybook/react-vite'
+
+// const preview: Preview = {
+//   parameters: {
+//     backgrounds: { default: 'light' },
+//     actions: { argTypesRegex: '^on[A-Z].*' },
+//     controls: { matchers: { color: /(background|color)$/i, date: /Date$/ } },
+//   },
+// }
+
+// export default preview

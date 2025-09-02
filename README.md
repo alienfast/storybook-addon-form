@@ -1,6 +1,6 @@
 # AlienFast Storybook Addon Form
 
-### Development scripts
+## Development scripts
 
 - `yarn start` runs tsup in watch mode and starts Storybook
 - `yarn build` build and package your addon code

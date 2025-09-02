@@ -1,40 +1,28 @@
-import type { StorybookConfig } from "@storybook/react-vite";
-const config: StorybookConfig = {
-  stories: ["../src/**/*.mdx", "../src/**/*.stories.@(js|jsx|ts|tsx)"],
-  addons: [
-    "@storybook/addon-links",
-    "@storybook/addon-essentials",
-    "@storybook/addon-interactions",
-    "./local-preset.js",
-  ],
-  // logLevel: "debug",
-  framework: {
-    name: "@storybook/react-vite",
-    options: {},
-  },
-  docs: {
-    autodocs: "tag",
-  },
-};
-export default config;
+import { defineMain } from '@storybook/react-vite/node'
 
+const config = defineMain({
+  stories: ['../src/**/*.mdx', '../src/**/*.stories.@(js|jsx|ts|tsx)'],
+  addons: ['@storybook/addon-docs', './local-preset.cjs'],
+  framework: '@storybook/react-vite',
+})
 
-// import type { StorybookConfig } from '@storybook/react-vite';
+export default config
+
+// import type { StorybookConfig } from '@storybook/react-vite'
 // const config: StorybookConfig = {
-//   stories: ["../src/**/*.mdx", "../src/**/*.stories.@(js|jsx|ts|tsx)"],
+//   stories: ['../src/**/*.mdx', '../src/**/*.stories.@(js|jsx|ts|tsx)'],
 //   addons: [
-//     "@storybook/addon-links",
-//     "@storybook/addon-essentials",
-//     "@storybook/addon-interactions",
-//     "./local-preset.js",
+//     '@storybook/addon-links',
+//     '@storybook/addon-essentials',
+//     '@storybook/addon-interactions',
+//     './local-preset.cjs',
 //   ],
-//   framework: {
-//     name: "@storybook/react-vite",
-//     options: {},
-//   },
+//   // logLevel: "debug",
+//   framework: { name: '@storybook/react-vite', options: {} },
 //   docs: {
-//     autodocs: "tag",
+//     // autodocs: 'tag'
 //   },
-// };
+// }
+// export default config
 
 // // NOTE see https://github.com/storybookjs/addon-kit for example

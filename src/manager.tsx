@@ -1,7 +1,7 @@
-import { addons, types } from '@storybook/manager-api'
+import { addons, types } from 'storybook/manager-api'
 
-import { ADDON_ID, PANEL_ID } from './constants'
-import { Panel } from './Panel'
+import { ADDON_ID, PANEL_ID } from './constants.js'
+import { Panel } from './Panel.js'
 
 /**
  * @see https://github.com/storybookjs/storybook/blob/next/code/addons/controls/src/manager.tsx
