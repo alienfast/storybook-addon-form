@@ -14,7 +14,7 @@ __metadata:
 
 "@alienfast/eslint-config@npm:^6.0.3":
   version: 6.0.3
-  resolution: "@alienfast/eslint-config@npm:6.0.3"
+  resolution: "@alienfast/eslint-config@npm:6.0.3::__archiveUrl=https%3A%2F%2Fnpm.pkg.github.com%2Fdownload%2F%40alienfast%2Feslint-config%2F6.0.3%2F3ca792c67bc8ca45039311264c2843d7d676e201"
   dependencies:
     "@eslint-community/eslint-plugin-eslint-comments": "npm:^4.5.0"
     "@eslint/eslintrc": "npm:^3.3.1"
@@ -87,7 +87,7 @@ __metadata:
 
 "@alienfast/tsconfig@npm:^1.0.4":
   version: 1.0.4
-  resolution: "@alienfast/tsconfig@npm:1.0.4"
+  resolution: "@alienfast/tsconfig@npm:1.0.4::__archiveUrl=https%3A%2F%2Fnpm.pkg.github.com%2Fdownload%2F%40alienfast%2Ftsconfig%2F1.0.4%2F6018c8c4dededf8c8bb645e0a1d254afc8938fb4"
   dependencies:
     "@tsconfig/create-react-app": "npm:^2.0.5"
   checksum: 10/6d5526403dd032e2affc4bc8cf6f8e5f728ad6530afb5a15ddcd3a9e13be370642e414ee2017a4690cf3e26aaa515563b0d3a5d324b987a37ccded372cff62de
