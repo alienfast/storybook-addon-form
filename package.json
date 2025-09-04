@@ -67,7 +67,6 @@
     "@auto-it/first-time-contributor": "^11.3.0",
     "@auto-it/released": "^11.3.0",
     "@storybook/react-vite": "^9.1.4",
-    "@storybook/testing-library": "^0.2.2",
     "@types/eslint": "^9",
     "@types/react": "^19.1.12",
     "@types/react-dom": "^19.1.9",
