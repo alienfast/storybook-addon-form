@@ -1,3 +1,15 @@
+# v3.0.1 (Thu Sep 04 2025)
+
+#### ⚠️ Pushed to `main`
+
+- update to react 19 ([@rosskevin](https://github.com/rosskevin))
+
+#### Authors: 1
+
+- Kevin Ross ([@rosskevin](https://github.com/rosskevin))
+
+---
+
 # v3.0.0 (Tue Sep 02 2025)
 
 #### 💥 Breaking Change
