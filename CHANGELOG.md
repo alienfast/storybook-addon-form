@@ -1,3 +1,16 @@
+# v3.0.2 (Thu Sep 04 2025)
+
+#### ⚠️ Pushed to `main`
+
+- omit outdated testing-library ([@rosskevin](https://github.com/rosskevin))
+- increase min version for react ([@rosskevin](https://github.com/rosskevin))
+
+#### Authors: 1
+
+- Kevin Ross ([@rosskevin](https://github.com/rosskevin))
+
+---
+
 # v3.0.1 (Thu Sep 04 2025)
 
 #### ⚠️ Pushed to `main`
