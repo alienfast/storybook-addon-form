@@ -1,5 +1,7 @@
 # AlienFast Storybook Addon Form
 
+This plugin is proprietary to AlienFast's use of `react-final-form`, specifically how we wire in `channel.emit` to our `Form` in development/storybook environments. The `Button.stories.tsx` mimics this behavior for local addon testing.
+
 ## Development scripts
 
 - `yarn start` runs tsup in watch mode and starts Storybook
