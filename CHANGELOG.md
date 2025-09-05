@@ -1,3 +1,16 @@
+# v3.0.3 (Fri Sep 05 2025)
+
+#### ⚠️ Pushed to `main`
+
+- fix missing presets ([@rosskevin](https://github.com/rosskevin))
+- copy over tsup config and package.json related entries to sync distributable ([@rosskevin](https://github.com/rosskevin))
+
+#### Authors: 1
+
+- Kevin Ross ([@rosskevin](https://github.com/rosskevin))
+
+---
+
 # v3.0.2 (Thu Sep 04 2025)
 
 #### ⚠️ Pushed to `main`
