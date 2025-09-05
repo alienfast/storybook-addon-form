@@ -1,2 +1,6 @@
-.eslint*
-.ncurc.js
+.*
+tsconfig*
+eslint*
+tsup*
+vite*
+yarn.lock
