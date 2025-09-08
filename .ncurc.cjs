@@ -1,9 +1,8 @@
+const reactLibs = ['react', 'react-dom', '@types/react', '@types/react-dom']
 module.exports = {
   packageFile: './package.json',
   packageManager: 'yarn',
-  // reject: ['react', 'react-dom', '@types/react', '@types/react-dom'],
-  // target: (name: string, versionRange: SemVer[]) => string
-  // target: (name) =>
-  //   // name === 'yup' ? '@next' : name.startsWith('@storybook/') ? '@next' : 'latest',
-  //   name === 'yup' ? '@next' : 'latest',
+  // react has to be 18.x for addons in Storybook 9
+  // https://github.com/storybookjs/addon-kit/issues/84#issuecomment-3260519954
+  target: (name) => (reactLibs.includes(name) ? 'minor' : 'latest'),
 }
