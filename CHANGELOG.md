@@ -1,3 +1,15 @@
+# v3.0.4 (Mon Sep 08 2025)
+
+#### ⚠️ Pushed to `main`
+
+- lock react to 18 minor due to storybook 9 requirement for addons (internal) ([@rosskevin](https://github.com/rosskevin))
+
+#### Authors: 1
+
+- Kevin Ross ([@rosskevin](https://github.com/rosskevin))
+
+---
+
 # v3.0.3 (Fri Sep 05 2025)
 
 #### ⚠️ Pushed to `main`
