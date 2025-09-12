@@ -1,3 +1,15 @@
+# v3.0.6 (Fri Sep 12 2025)
+
+#### ⚠️ Pushed to `main`
+
+- be more clear that we are just altering the module ([@rosskevin](https://github.com/rosskevin))
+
+#### Authors: 1
+
+- Kevin Ross ([@rosskevin](https://github.com/rosskevin))
+
+---
+
 # v3.0.5 (Fri Sep 12 2025)
 
 #### ⚠️ Pushed to `main`
