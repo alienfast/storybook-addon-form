@@ -1,3 +1,15 @@
+# v3.0.5 (Fri Sep 12 2025)
+
+#### ⚠️ Pushed to `main`
+
+- switch back to base addon-kit tsconfig ([@rosskevin](https://github.com/rosskevin))
+
+#### Authors: 1
+
+- Kevin Ross ([@rosskevin](https://github.com/rosskevin))
+
+---
+
 # v3.0.4 (Mon Sep 08 2025)
 
 #### ⚠️ Pushed to `main`
