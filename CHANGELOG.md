@@ -1,3 +1,15 @@
+# v3.0.7 (Fri Sep 12 2025)
+
+#### ⚠️ Pushed to `main`
+
+- just restore the cjs tsconfig and move on… ([@rosskevin](https://github.com/rosskevin))
+
+#### Authors: 1
+
+- Kevin Ross ([@rosskevin](https://github.com/rosskevin))
+
+---
+
 # v3.0.6 (Fri Sep 12 2025)
 
 #### ⚠️ Pushed to `main`
