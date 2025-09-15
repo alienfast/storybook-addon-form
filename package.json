@@ -40,7 +40,7 @@
     "clean:yarn": "rimraf yarn.lock node_modules .yarn/install-state.gz && yarn cache clean",
     "prebuild": "yarn clean",
     "build": "tsup",
-    "build:ide": "tsc",
+    "typecheck": "tsc",
     "build:watch": "yarn build --watch",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "run-p build:watch storybook",
