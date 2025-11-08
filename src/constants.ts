@@ -1,4 +1,4 @@
-import { FormState } from 'final-form'
+import type { FormState } from 'final-form'
 
 export interface Results<FormValues = any> {
   state: FormState<FormValues>
