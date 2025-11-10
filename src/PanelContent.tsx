@@ -3,7 +3,7 @@ import * as React from 'react'
 import { TabsState } from 'storybook/internal/components'
 import { convert, themes } from 'storybook/theming'
 
-import { Results } from './constants.js'
+import { type Results } from './constants.js'
 import { DisplayJson } from './DisplayJson.js'
 
 interface PanelProps {

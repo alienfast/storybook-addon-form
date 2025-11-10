@@ -3,7 +3,7 @@ import { AddonPanel } from 'storybook/internal/components'
 import { STORY_CHANGED } from 'storybook/internal/core-events'
 import { useAddonState, useChannel } from 'storybook/manager-api'
 
-import { ADDON_ID, EVENTS, Results } from './constants.js'
+import { ADDON_ID, EVENTS, type Results } from './constants.js'
 import { PanelContent } from './PanelContent.js'
 
 interface PanelProps {

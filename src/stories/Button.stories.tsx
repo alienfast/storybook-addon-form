@@ -1,4 +1,4 @@
-import { Meta, StoryObj } from '@storybook/react-vite'
+import { type Meta, type StoryObj } from '@storybook/react-vite'
 import { addons } from 'storybook/preview-api'
 
 import { EVENTS } from '../constants.js'

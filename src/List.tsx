@@ -25,7 +25,6 @@ const Icon = styled(ArrowDownIcon)(({ theme }) => ({
   height: 10,
   width: 10,
   minWidth: 10,
-  // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-member-access
   color: theme.color.mediumdark,
   marginRight: 10,
   transition: 'transform 0.1s ease-in-out',

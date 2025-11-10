@@ -1,9 +1,9 @@
 import { readFile } from 'node:fs/promises'
 
-import { BROWSER_TARGETS, NODE_TARGET } from 'storybook/internal/builder-manager'
-import { globalPackages as globalManagerPackages } from 'storybook/internal/manager/globals'
-import { globalPackages as globalPreviewPackages } from 'storybook/internal/preview/globals'
 import { defineConfig, type Options } from 'tsup'
+
+// Modern browser targets for Storybook 10
+const BROWSER_TARGETS = ['chrome100', 'safari15', 'firefox91']
 
 type BundlerConfig = {
   bundler?: {
@@ -57,10 +57,10 @@ export default defineConfig(async (options) => {
       dts: {
         resolve: true,
       },
-      format: ['esm', 'cjs'],
+      format: ['esm'],
       platform: 'neutral',
-      target: NODE_TARGET,
-      external: [...globalManagerPackages, ...globalPreviewPackages],
+      target: 'node20.19',
+      external: ['storybook', '@storybook/icons', 'react', 'react-dom'],
     })
   }
 
@@ -74,7 +74,7 @@ export default defineConfig(async (options) => {
       format: ['esm'],
       platform: 'browser',
       target: BROWSER_TARGETS,
-      external: globalManagerPackages,
+      external: ['storybook', '@storybook/icons', 'react', 'react-dom'],
     })
   }
 
@@ -88,10 +88,10 @@ export default defineConfig(async (options) => {
       dts: {
         resolve: true,
       },
-      format: ['esm', 'cjs'],
+      format: ['esm'],
       platform: 'browser',
       target: BROWSER_TARGETS,
-      external: globalPreviewPackages,
+      external: ['storybook', '@storybook/icons', 'react', 'react-dom'],
     })
   }
 
@@ -102,9 +102,9 @@ export default defineConfig(async (options) => {
     configs.push({
       ...commonConfig,
       entry: nodeEntries,
-      format: ['cjs'],
+      format: ['esm'],
       platform: 'node',
-      target: NODE_TARGET,
+      target: 'node20.19',
     })
   }
 
