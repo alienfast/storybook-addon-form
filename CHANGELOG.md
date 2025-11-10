@@ -1,3 +1,15 @@
+# v4.0.0 (Mon Nov 10 2025)
+
+#### 💥 Breaking Change
+
+- feat!: Migrate to Storybook 10 and ESM-only distribution [#10](https://github.com/alienfast/storybook-addon-form/pull/10) ([@rosskevin](https://github.com/rosskevin))
+
+#### Authors: 1
+
+- Kevin Ross ([@rosskevin](https://github.com/rosskevin))
+
+---
+
 # v3.0.7 (Fri Sep 12 2025)
 
 #### ⚠️ Pushed to `main`
