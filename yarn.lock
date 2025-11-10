@@ -51,6 +51,7 @@ __metadata:
     "@auto-it/all-contributors": "npm:^11.3.0"
     "@auto-it/first-time-contributor": "npm:^11.3.0"
     "@auto-it/released": "npm:^11.3.0"
+    "@storybook/addon-docs": "npm:^10.0.6"
     "@storybook/icons": "npm:^1.6.0"
     "@storybook/react-vite": "npm:^10.0.6"
     "@types/eslint": "npm:^9"
@@ -1101,6 +1102,18 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@mdx-js/react@npm:^3.0.0":
+  version: 3.1.1
+  resolution: "@mdx-js/react@npm:3.1.1"
+  dependencies:
+    "@types/mdx": "npm:^2.0.0"
+  peerDependencies:
+    "@types/react": ">=16"
+    react: ">=16"
+  checksum: 10/52a740e2f37761694fa94d4704b7825084b4055616a95c8b8f4c1676190d399ddc5cdbb399ffc45b550beecd30497a7224c2e5b05bf43ecb668c7473641037d1
+  languageName: node
+  linkType: hard
+
 "@napi-rs/wasm-runtime@npm:^0.2.11":
   version: 0.2.12
   resolution: "@napi-rs/wasm-runtime@npm:0.2.12"
@@ -1508,6 +1521,23 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@storybook/addon-docs@npm:^10.0.6":
+  version: 10.0.6
+  resolution: "@storybook/addon-docs@npm:10.0.6"
+  dependencies:
+    "@mdx-js/react": "npm:^3.0.0"
+    "@storybook/csf-plugin": "npm:10.0.6"
+    "@storybook/icons": "npm:^1.6.0"
+    "@storybook/react-dom-shim": "npm:10.0.6"
+    react: "npm:^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0"
+    react-dom: "npm:^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0"
+    ts-dedent: "npm:^2.0.0"
+  peerDependencies:
+    storybook: ^10.0.6
+  checksum: 10/da1848c688297997c2ea46f78740f54e300f5765b6a179fe88dc792d7d7eb70af9309742ddad6e935bba3df23fb01f9f52f9060ba3cb7baf9f15fe00f62cb214
+  languageName: node
+  linkType: hard
+
 "@storybook/builder-vite@npm:10.0.6":
   version: 10.0.6
   resolution: "@storybook/builder-vite@npm:10.0.6"
@@ -1806,6 +1836,13 @@ __metadata:
   dependencies:
     "@types/unist": "npm:*"
   checksum: 10/efe3ec11b9ee0015a396c4fb4cd1b6f31b51b8ae9783c59560e6fc0bf6c2fa1dcc7fccaf45fa09a6c8b3397fab9dc8d431433935cae3835caa70a18f7fc775f8
+  languageName: node
+  linkType: hard
+
+"@types/mdx@npm:^2.0.0":
+  version: 2.0.13
+  resolution: "@types/mdx@npm:2.0.13"
+  checksum: 10/b73ed5f08114879b9590dc6a9ee8b648643c57c708583cd24b2bc3cc8961361fc63139ac7e9291e7b3b6e6b45707749d01d6f9727ddec5533df75dc3b90871a4
   languageName: node
   linkType: hard
 

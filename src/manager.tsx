@@ -10,7 +10,7 @@ addons.register(ADDON_ID, (api) => {
   // Register the panel
   addons.add(PANEL_ID, {
     type: types.PANEL,
-    title: 'AF Form',
+    title: 'Form',
     match: ({ viewMode }) => viewMode === 'story',
     render: Panel,
     // paramKey: PARAM_KEY,
