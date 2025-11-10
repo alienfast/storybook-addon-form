@@ -1,6 +1,6 @@
 {
   "name": "@alienfast/storybook-addon-form",
-  "version": "3.0.7",
+  "version": "4.0.0",
   "description": "Storybook addon for form information",
   "keywords": [
     "storybook-addons"
